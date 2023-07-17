@@ -4,6 +4,9 @@ A small display unit for a keyboard input. It is specifically designed to pair w
 
 ## Setup
 1. Install a lite version of the Raspberry PI OS on a SD Card
+0. On the PI
+  1. `sudo raspi-config`
+  2. choose: "Interfacing Options > SPI > Yes Open SPI Interface"
 2. Download this repo to the PI
   1. `sudo apt-get update`
   2. `sudo apt-get install git`
