@@ -35,3 +35,9 @@ A small display unit for a keyboard input. It is specifically designed to pair w
   4. AlphaNumeric
   5. All
 
+
+
+NEXT:
+1. fix path reference to font
+2. add 3rd line to point to index
+3. initial text should use whole line
