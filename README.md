@@ -7,8 +7,9 @@ A small display unit for a keyboard input. It is specifically designed to pair w
 0. On the PI
   1. `sudo raspi-config`
   2. choose: "Interfacing Options > SPI > Yes Open SPI Interface"
-  3. Restart the PI
-  4. `sudo apt-get update`
+  3. choose: "Interfacing Options > I2C > Yes Open I2C Interface"
+  4. Restart the PI
+  5. `sudo apt-get update`
      `sudo apt-get install python3-pip`
      `sudo apt-get install python3-pil`
      `sudo apt-get install python3-numpy`
@@ -18,8 +19,14 @@ A small display unit for a keyboard input. It is specifically designed to pair w
 2. Download this repo to the PI
   1. `sudo apt-get update`
   2. `sudo apt-get install git`
-  3. `git clone https://github.com/abitwitch/PiTelegraphDisplay.git`
+  3. `sudo pip3 install smbus`
+  4. `git clone https://github.com/abitwitch/PiTelegraphDisplay.git`
 3. Set `startup.sh` to run on startup
+  1. `chmod +x startup.sh`
+  2. `sudo nano /etc/rc.local`
+  3. Add these lines to the end: 
+    `cd /path/to/PiTelegraphDisplay`
+    `sudo bash startup.sh`
 4. TODO: opimize boot
 
 
@@ -38,8 +45,4 @@ A small display unit for a keyboard input. It is specifically designed to pair w
 
 
 NEXT:
-1. fix path reference to font
-2. add 3rd line to point to index
-3. initial text should use whole line
-4. battery level
-5. Menu
+1. Menu
