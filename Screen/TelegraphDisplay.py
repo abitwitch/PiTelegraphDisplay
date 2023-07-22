@@ -1,8 +1,10 @@
 import time
 import sys
 sys.path.append('./drive')
+import os
 import SPI
 import SSD1305
+
 
 from PIL import Image
 from PIL import ImageDraw
@@ -29,7 +31,9 @@ class Screen(object):
         self.padding = 0
         self.top = self.padding
         self.bottom = self.height-self.padding
-        self.font = ImageFont.truetype('04B_08__.TTF',8)
+        dirname = os.path.dirname(__file__)
+        fontPath = os.path.join(dirname, '04B_08__.TTF')
+        self.font = ImageFont.truetype(fontPath,8)
     def writeLines(self,line1="",line2="",line3="",line4=""):
         self.draw.rectangle((0,0,self.width,self.height), outline=0, fill=0)
         x=0

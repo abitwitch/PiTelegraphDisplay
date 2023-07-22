@@ -41,3 +41,5 @@ NEXT:
 1. fix path reference to font
 2. add 3rd line to point to index
 3. initial text should use whole line
+4. battery level
+5. Menu
