@@ -55,7 +55,7 @@ def updateDisplay():
     line2=text[fromIndex:toIndex]
     line2=line2.rjust(lineLength)
     #line3
-    line3=" "*(lineLength/2)
+    line3=" "*int(lineLength/2)
     line3+="^"
     #lines to display
     print(line1+"\n"+line2+"\n"+line3)
